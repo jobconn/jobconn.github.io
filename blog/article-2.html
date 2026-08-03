@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>用纯静态 HTML 搭一个属于自己的站点</title>
+  <meta name="description" content="从零开始，用纯静态 HTML/CSS/JS 搭建个人网站的步骤与思路。" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">你的名字<span>.</span></div>
+      <nav class="nav-links">
+        <a href="../index.html">首页</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <article class="article">
+    <a class="back-link" href="../index.html#blog">← 返回博客列表</a>
+    <h1>用纯静态 HTML 搭一个属于自己的站点</h1>
+    <div class="meta">2026-07-23 · 分类：教程</div>
+
+    <p>
+      上篇说了"为什么"，这篇说"怎么做"。核心思路：<strong>一个 index.html + 一份 style.css，就够一个像样的个人站了</strong>。
+    </p>
+
+    <h2>1. 文件结构</h2>
+    <pre><code>个人网页/
+├── index.html        # 首页（简介+作品+博客+公众号+联系）
+├── blog/             # 文章页放这里
+│   └── article-1.html
+└── assets/
+    ├── css/style.css
+    └── js/main.js</code></pre>
+
+    <h2>2. 首页分区块</h2>
+    <p>
+      用 <code>&lt;section id="xxx"&gt;</code> 把内容切成"简介 / 作品 / 博客 / 公众号 / 联系"几个区块，
+      导航栏用锚点 <code>#projects</code> 跳转，天然平滑滚动。
+    </p>
+
+    <h2>3. 加文章就是复制粘贴</h2>
+    <p>
+      新写一篇，复制 <code>blog/article-1.html</code> 重命名，改标题和内容即可，无需任何构建步骤。
+      当文章变多、想要更好的写作体验时，再考虑迁移到 Astro / Hugo 这类静态框架。
+    </p>
+
+    <p>这个站点本身，就是按这个思路搭的。你看到的页面，就是模板。</p>
+  </article>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      © <span id="year">2026</span> 你的名字 · <a href="../index.html">返回首页</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
