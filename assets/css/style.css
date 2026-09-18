@@ -135,6 +135,59 @@ section { padding: 60px 0; }
 .card .links a { color: var(--muted); font-size: .9rem; }
 .card .links a:hover { color: var(--accent); }
 
+/* 应用卡片封面（展示区） */
+.app-card { padding: 0; overflow: hidden; }
+.app-cover {
+  height: 130px; display: grid; place-items: center;
+  font-size: 3.4rem; line-height: 1;
+  background: linear-gradient(135deg, var(--accent-soft), var(--surface-2));
+  border-bottom: 1px solid var(--border);
+}
+.app-card h3 { margin: 18px 22px 8px; }
+.app-card .tag { margin-left: 22px; }
+.app-card p { margin: 0 22px; }
+.app-card .meta { margin: 16px 22px 22px; }
+
+/* 应用分组标题（网页应用 / 移动桌面） */
+.apps-group-title {
+  font-size: 1.05rem; font-weight: 700; margin: 36px 0 16px; color: var(--text);
+}
+.apps-group-title:first-of-type { margin-top: 6px; }
+
+/* 展示卡封面色（区分品类） */
+.app-cover-cat { background: linear-gradient(135deg, #fde7f0, var(--surface-2)); }
+.app-cover-wire { background: linear-gradient(135deg, #e7f0fd, var(--surface-2)); }
+.app-card .meta .badge-soon { display: inline-block; margin-bottom: 8px; }
+
+/* 展示卡「了解更多」折叠 */
+.app-detail { margin-top: 12px; border-top: 1px dashed var(--border); padding-top: 10px; }
+.app-detail summary { cursor: pointer; font-size: .88rem; font-weight: 600; color: var(--accent); }
+.app-detail summary:hover { text-decoration: underline; }
+.app-detail-body { margin-top: 10px; font-size: .88rem; color: var(--muted); }
+.app-detail-body p { margin: 6px 0; }
+
+/* 应用内嵌弹层（iframe） */
+.app-modal {
+  position: fixed; inset: 0; z-index: 200; background: var(--bg);
+  display: none; flex-direction: column;
+}
+.app-modal.open { display: flex; }
+.app-modal-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 18px; border-bottom: 1px solid var(--border);
+  background: var(--surface); flex-shrink: 0;
+}
+.app-modal-title { font-weight: 700; font-size: 1rem; }
+.app-modal-bar > div { display: flex; align-items: center; gap: 14px; }
+.app-modal-open { font-size: .88rem; color: var(--accent); }
+.app-modal-close {
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 1rem;
+  display: grid; place-items: center; transition: .2s;
+}
+.app-modal-close:hover { border-color: var(--accent); color: var(--accent); }
+.app-modal-frame { flex: 1; width: 100%; border: 0; background: var(--surface); }
+
 .tag {
   display: inline-block; font-size: .72rem; padding: 3px 10px;
   border-radius: 999px; background: var(--accent-soft);
