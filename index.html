@@ -16,6 +16,7 @@
       <nav class="nav-links">
         <a href="#top">首页</a>
         <a href="#projects">作品</a>
+        <a href="#apps">应用</a>
         <a href="#blog">博客</a>
         <a href="#contact">联系</a>
         <button class="theme-toggle" id="themeToggle" aria-label="切换主题">🌙</button>
@@ -82,6 +83,30 @@
           <h3>从 OEM 到 ODM 转型</h3>
           <p>由依客户图纸实现，转为自主设计方案并验证、客户承认投产，建立研发工程与标准化体系。</p>
           <div class="meta"><a href="#">查看详情 →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 我做的应用 / 工具 ===== -->
+  <section id="apps">
+    <div class="container">
+      <h2 class="section-title">我做的应用 / 工具</h2>
+      <p class="section-sub">从零搭建的纯前端 Web 应用，直接托管在本站同源运行——打开即用，无需另外发布。</p>
+      <div class="grid grid-2">
+        <div class="card app-card">
+          <div class="app-cover">⚙️</div>
+          <span class="tag">纯前端</span><span class="tag">工时分析</span>
+          <h3>精益改善分析助手（LIA）</h3>
+          <p>把工作文件资产化的人机双轨工时分析工具：标准工时、EWI 标准库、改善提案一键生成，支持本地数据留存。</p>
+          <div class="meta"><a class="btn btn-primary" href="apps/lia/index.html" target="_blank" rel="noopener">打开应用 →</a></div>
+        </div>
+        <div class="card app-card">
+          <div class="app-cover">🎓</div>
+          <span class="tag">纯前端</span><span class="tag">学习系统</span>
+          <h3>智修 · Agent 修炼系统</h3>
+          <p>面向小白的 AI Agent 学习路线与关卡化修炼系统——从零到高手的系统性内容树，P0 原型可玩。</p>
+          <div class="meta"><a class="btn btn-primary" href="apps/zhixiu/index.html" target="_blank" rel="noopener">打开应用 →</a></div>
         </div>
       </div>
     </div>
@@ -159,6 +184,7 @@
         <div class="links">
           <a href="index.html#top">首页</a>
           <a href="index.html#projects">作品</a>
+          <a href="index.html#apps">应用</a>
           <a href="workbench.html">工作台</a>
           <a href="index.html#blog">博客</a>
         </div>
@@ -168,6 +194,18 @@
       © <span id="year">2026</span> 梁文华 · 纯静态 HTML 搭建 · 对外门面与对内工作台合一
     </div>
   </footer>
+
+  <!-- ===== 应用内嵌弹层（站内 iframe 运行，不跳走） ===== -->
+  <div class="app-modal" id="appModal" aria-hidden="true">
+    <div class="app-modal-bar">
+      <span class="app-modal-title" id="appModalTitle">应用</span>
+      <div>
+        <a class="app-modal-open" id="appModalOpen" href="#" target="_blank" rel="noopener">新窗口打开 ↗</a>
+        <button class="app-modal-close" id="appModalClose" aria-label="关闭">✕</button>
+      </div>
+    </div>
+    <iframe class="app-modal-frame" id="appModalFrame" title="应用"></iframe>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>
